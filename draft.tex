@@ -2,12 +2,14 @@
 
 % The area before our main document is called preamble
 \title{My first document}
-\date{2013-09-01}
-\author{John Doe}
+\date{08/05/2020}
+\author{Evram Youssef}
 %This pakcage removes numbering after equations
 \usepackage{amsmath}
 %Figures package
 \usepackage{graphicx}
+%For multiple figures
+\usepackage{subcaption}
 
 
 \begin{document}
@@ -16,6 +18,13 @@
 % on the next page numbers like so:
     \pagenumbering{gobble}
     \maketitle
+    \newpage
+    \pagenumbering{arabic}
+
+    \pagenumbering{gobble}
+    \tableofcontents
+    \listoffigures
+    \listoftables
     \newpage
     \pagenumbering{arabic}
 
@@ -77,13 +86,28 @@
       \end{align*}
     
     \section{Figures}
-    \begin{figure}
+    \begin{figure}[t!]
         %I put \linewidth into the brackets, which means the picture will be scaled to fit the width of the document.
         \includegraphics[width=\linewidth]{pic.png}
         \caption{Meme}
         \label{fig:meme}
-      \end{figure}
+    \end{figure}
 
-    
+    \begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{pic.png}
+        \caption{Meme.}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{pic.png}
+        \caption{Same Meme.}
+    \end{subfigure}
+    \caption{The same meme, Two times.}
+    \label{fig:coffee}
+    \end{figure}
+
+
+
 
 \end{document}
