@@ -1,5 +1,46 @@
-\documentclass {article}
+\documentclass{article}
+
+% The area before our main document is called preamble
+\title{My first document}
+\date{2013-09-01}
+\author{John Doe}
 
 \begin{document}
-	helloooo
+% This can be done by adding the \pagenumbering{gobble}
+% command and then changing it back to \pagenumbering{arabic} 
+% on the next page numbers like so:
+    \pagenumbering{gobble}
+    \maketitle
+    \newpage
+    \pagenumbering{arabic}
+
+% These commands for Sectioning...
+% The section commands are numbered and will appear in the table of contents of your document.
+% Paragraphs aren't numbered and won't show in the table of contents.
+    % \section{}
+    % \subsection{}
+    % \subsubsection{}
+
+    % \paragraph{}
+    % \subparagraph{}
+%EXAMPLE
+    \section{Section}
+    Hello World!
+
+    \subsection{Subsection}
+    Structuring a document is easy!
+
+    \subsubsection{Subsubsection}
+    More text.
+
+    \paragraph{Paragraph}
+    Some more text.
+
+    \subparagraph{Subparagraph}
+    Even more text.
+
+    \section{Another section}
+    Hello World 2!
+
+    
 \end{document}
